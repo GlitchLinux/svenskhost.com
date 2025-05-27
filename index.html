@@ -3,754 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SvenskHost - Premium Webbhotell & Webbdesign</title>
-    <meta name="description" content="Professionella webbhotell och webbdesign med svensk support">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SvenskHost.com - Komplett webbhotell & webbdesign</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         :root {
-            --primary: #0056b3;
-            --secondary: #ff7e33;
-            --dark: #2d3748;
-            --gray: #718096;
-            --light: #f7fafc;
-            --white: #ffffff;
+            --primary: #005F87;
+            --secondary: #FFD700;
+            --light: #F5F5F5;
+            --dark: #333333;
         }
-
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: var(--dark);
+            margin: 0;
+            padding: 0;
         }
-
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+        }
         .container {
+            width: 85%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
-
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary);
         }
-
-        .header-content {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
         }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .nav {
+        nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
         }
-
-        .nav a {
-            color: var(--dark);
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+            font-weight: bold;
         }
-
-        .nav a:hover {
-            color: var(--primary);
-        }
-
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #003d7a 100%);
-            color: var(--white);
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1551434678-e076c223a692');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
             text-align: center;
-            padding: 120px 0 80px;
         }
-
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
-
         .hero p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
         }
-
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 0.8rem 1.5rem;
             border-radius: 5px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin: 0 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
-
-        .btn-primary {
-            background: var(--secondary);
-            color: var(--white);
+        .btn:hover {
+            background-color: #e6c200;
+            transform: translateY(-3px);
         }
-
-        .btn-primary:hover {
-            background: #e66a22;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--white);
-            color: var(--white);
-        }
-
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--primary);
-        }
-
-        /* Sections */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray);
-            margin-bottom: 60px;
-            font-size: 18px;
-        }
-
-        /* Features */
         .features {
-            background: var(--white);
+            padding: 4rem 0;
+            background-color: var(--light);
         }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 2rem;
+            margin-top: 2rem;
         }
-
         .feature-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             text-align: center;
-            padding: 40px 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
         }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
         }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 24px;
-        }
-
         .feature-card h3 {
-            margin-bottom: 15px;
-            font-size: 20px;
+            color: var(--primary);
         }
-
-        /* Pricing */
         .pricing {
-            background: var(--light);
+            padding: 4rem 0;
+            text-align: center;
         }
-
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
-
         .pricing-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 2rem;
+            transition: all 0.3s ease;
         }
-
         .pricing-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-
-        .pricing-card.popular {
-            border: 3px solid var(--secondary);
-            position: relative;
-        }
-
-        .pricing-card.popular::before {
-            content: 'Populärt';
-            position: absolute;
-            top: 15px;
-            right: -25px;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 5px 40px;
-            font-size: 12px;
-            font-weight: 600;
-            transform: rotate(45deg);
-        }
-
-        .pricing-header {
-            padding: 30px;
-            text-align: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-
-        .pricing-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .pricing-price {
-            font-size: 36px;
-            font-weight: 700;
+        .pricing-card h3 {
             color: var(--primary);
         }
-
-        .pricing-features {
-            padding: 30px;
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: var(--primary);
         }
-
-        .pricing-features ul {
-            list-style: none;
-        }
-
-        .pricing-features li {
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .pricing-features li i {
-            color: #38a169;
-            margin-right: 10px;
-        }
-
-        .pricing-footer {
-            padding: 0 30px 30px;
-            text-align: center;
-        }
-
-        /* Contact */
         .contact {
-            background: var(--white);
+            padding: 4rem 0;
+            background-color: var(--light);
         }
-
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
-
-        .contact-info h3 {
-            margin-bottom: 30px;
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        .contact-info i {
+            margin-right: 0.5rem;
             color: var(--primary);
         }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #e2e8f0;
-            border-radius: 5px;
-            font-family: inherit;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: var(--white);
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
             text-align: center;
-            padding: 40px 0;
         }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-
-        .footer h4 {
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer li {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer a:hover {
-            color: var(--secondary);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            color: rgba(255,255,255,0.6);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .mobile-toggle {
-                display: block;
+            nav ul {
+                display: none;
             }
-
-            .nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: all 0.3s;
-            }
-
-            .nav.active {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
             .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .btn {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
+                font-size: 2rem;
             }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <header>
         <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <i class="fas fa-server"></i> SvenskHost
-                </a>
-                
-                <button class="mobile-toggle" id="mobileToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
-                <nav class="nav" id="nav">
-                    <a href="#features">Tjänster</a>
-                    <a href="#pricing">Priser</a>
-                    <a href="#contact">Kontakt</a>
-                </nav>
-            </div>
+            <nav>
+                <div class="logo">SvenskHost</div>
+                <ul>
+                    <li><a href="#tjanster">Tjänster</a></li>
+                    <li><a href="#priser">Priser</a></li>
+                    <li><a href="#om-oss">Om oss</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Premium Webbhotell & Webbdesign</h1>
-            <p>Allt du behöver för en professionell webbnärvaro med svensk support</p>
-            <div>
-                <a href="#pricing" class="btn btn-primary">Våra Paket</a>
-                <a href="#contact" class="btn btn-outline">Kontakta Oss</a>
-            </div>
+            <h1>Din kompletta webbplatslösning - enkelt och utan teknisk kunskap</h1>
+            <p>Domain, webbdesign, hosting och support - allt på ett ställe med svensk personal som hjälper dig varje steg på vägen.</p>
+            <a href="#priser" class="btn">Kom igång idag</a>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="section features" id="features">
+    <section id="tjanster" class="features">
         <div class="container">
-            <h2 class="section-title">Våra Tjänster</h2>
+            <h2 class="section-title">Våra tjänster</h2>
             <p class="section-subtitle">Allt du behöver för en framgångsrik webbplats</p>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
+                    <i class="fas fa-globe"></i>
                     <h3>Domänregistrering</h3>
-                    <p>Hitta och registrera det perfekta domännamnet för din verksamhet</p>
+                    <p>Vi hjälper dig hitta och registrera det perfekta domännamnet för din verksamhet.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
+                    <i class="fas fa-laptop-code"></i>
                     <h3>Webbdesign</h3>
-                    <p>Skräddarsydda webbplatser som konverterar och imponerar</p>
+                    <p>Professionell webbdesign anpassad efter dina behov - ingen teknisk kunskap krävs.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Hosting</h3>
-                    <p>Snabba SSD-servrar med 99.9% upptid och automatiska säkerhetskopior</p>
+                    <i class="fas fa-server"></i>
+                    <h3>Webbhotell</h3>
+                    <p>Snabba och säkra servrar i Sverige med 99.9% upptid garanti.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Support på svenska och engelska dygnet runt via telefon, chat och mejl.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Personlig Konsultation</h3>
+                    <p>Gratis rådgivning online eller personligt möte för att skräddarsy din lösning.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
                     <h3>Säkerhet</h3>
-                    <p>SSL-certifikat, DDoS-skydd och regelbundna säkerhetskontroller</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Support</h3>
-                    <p>Svensk support dygnet runt via telefon, chat eller email</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>SEO & Prestanda</h3>
-                    <p>Optimerade lösningar för bättre sökmotorranking</p>
+                    <p>Automatiska säkerhetskopior, SSL-certifikat och skydd mot attacker.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section pricing" id="pricing">
+    <section id="priser" class="pricing">
         <div class="container">
-            <h2 class="section-title">Våra Paket</h2>
-            <p class="section-subtitle">Välj det paket som passar din verksamhet bäst</p>
+            <h2 class="section-title">Enkla och transparenta priser</h2>
+            <p class="section-subtitle">Välj den paketlösning som passar din verksamhet bäst</p>
             
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Start</h3>
-                        <div class="pricing-price">299<span style="font-size:16px;">/mån</span></div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 1 Domännamn</li>
-                            <li><i class="fas fa-check"></i> 10 GB SSD-lagring</li>
-                            <li><i class="fas fa-check"></i> 5 E-postkonton</li>
-                            <li><i class="fas fa-check"></i> SSL-certifikat</li>
-                            <li><i class="fas fa-check"></i> 99.9% Upptid</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Välj Paket</a>
-                    </div>
-                </div>
-                
-                <div class="pricing-card popular">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Företag</h3>
-                        <div class="pricing-price">599<span style="font-size:16px;">/mån</span></div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 1 Domännamn</li>
-                            <li><i class="fas fa-check"></i> 50 GB SSD-lagring</li>
-                            <li><i class="fas fa-check"></i> Obegränsade e-postkonton</li>
-                            <li><i class="fas fa-check"></i> Avancerad säkerhet</li>
-                            <li><i class="fas fa-check"></i> Prioriterad support</li>
-                            <li><i class="fas fa-check"></i> SEO Grundoptimering</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-primary">Välj Paket</a>
-                    </div>
+                    <h3>Startpaket</h3>
+                    <div class="price">299 kr/mån</div>
+                    <ul>
+                        <li>1 Domännamn</li>
+                        <li>Enkel webbdesign</li>
+                        <li>10 GB lagring</li>
+                        <li>Grundläggande support</li>
+                        <li>5 e-postkonton</li>
+                    </ul>
+                    <a href="#kontakt" class="btn">Välj</a>
                 </div>
                 
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Premium</h3>
-                        <div class="pricing-price">999<span style="font-size:16px;">/mån</span></div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 2 Domännamn</li>
-                            <li><i class="fas fa-check"></i> 100 GB SSD-lagring</li>
-                            <li><i class="fas fa-check"></i> Dedikerade resurser</li>
-                            <li><i class="fas fa-check"></i> 24/7 VIP-support</li>
-                            <li><i class="fas fa-check"></i> Full SEO-optimering</li>
-                            <li><i class="fas fa-check"></i> CDN inkluderat</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-footer">
-                        <a href="#contact" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Välj Paket</a>
-                    </div>
+                    <h3>Företagspaket</h3>
+                    <div class="price">599 kr/mån</div>
+                    <ul>
+                        <li>1 Domännamn</li>
+                        <li>Professionell webbdesign</li>
+                        <li>50 GB lagring</li>
+                        <li>Prioriterad support</li>
+                        <li>Obegränsade e-postkonton</li>
+                        <li>SEO-optimering</li>
+                    </ul>
+                    <a href="#kontakt" class="btn">Välj</a>
                 </div>
+                
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price">999 kr/mån</div>
+                    <ul>
+                        <li>2 Domännamn</li>
+                        <li>Avancerad webbdesign</li>
+                        <li>100 GB lagring</li>
+                        <li>24/7 VIP-support</li>
+                        <li>Obegränsade e-postkonton</li>
+                        <li>SEO & Marknadsföring</li>
+                        <li>Månatliga säkerhetskopior</li>
+                    </ul>
+                    <a href="#kontakt" class="btn">Välj</a>
+                </div>
+            </div>
+            
+            <p style="margin-top: 2rem;">Behöver du en anpassad lösning? <a href="#kontakt">Kontakta oss</a> för en personlig offert.</p>
+        </div>
+    </section>
+
+    <section id="om-oss" class="about" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Varför välja SvenskHost?</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p>På SvenskHost gör vi det enkelt för dig att etablera en professionell webbnärvaro - oavsett din tekniska kunskap. Vår passion är att hjälpa svenska företag och organisationer att lyckas online.</p>
+                
+                <h3 style="color: var(--primary); margin-top: 2rem;">Vår vision</h3>
+                <p>Vi tror att varje företag förtjänar en webbplats som reflekterar deras unika värde - och att den ska vara enkel att skapa och underhålla. Därför har vi skapat en komplett lösning där vi tar hand om allt tekniskt åt dig.</p>
+                
+                <h3 style="color: var(--primary); margin-top: 2rem;">Svensk support</h3>
+                <p>All vår support sker på svenska eller engelska, med snabba svarstider och personlig service. Vi finns här för dig när du behöver hjälp - dygnet runt, året om.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section contact" id="contact">
+    <section id="kontakt" class="contact">
         <div class="container">
-            <h2 class="section-title">Kontakta Oss</h2>
-            <p class="section-subtitle">Vi hjälper dig gärna komma igång</p>
+            <h2 class="section-title">Kontakta oss</h2>
+            <p class="section-subtitle">Vi hjälper dig gärna på vägen till din perfekta webbplats</p>
             
             <div class="contact-grid">
-                <div class="contact-info">
+                <div>
                     <h3>Kontaktinformation</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Telefon</h4>
-                            <p><a href="tel:+4681234567">08-123 45 67</a></p>
-                        </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i> <span>08-123 45 67</span>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>E-post</h4>
-                            <p><a href="mailto:support@svenskhost.com">support@svenskhost.com</a></p>
-                        </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i> <span>support@svenskhost.com</span>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Adress</h4>
-                            <p>Sveavägen 123<br>111 34 Stockholm</p>
-                        </div>
+                    <div class="contact-info">
+                        <i class="fas fa-comment-dots"></i> <span>Live-chat på webbplatsen</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i> <span>Support dygnet runt, året om</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i> <span>Sveavägen 123, 111 34 Stockholm</span>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Skicka Meddelande</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Namn</label>
-                            <input type="text" id="name" class="form-control" required>
+                <div>
+                    <h3>Boka konsultation</h3>
+                    <form>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name">Namn</label>
+                            <input type="text" id="name" style="width: 100%; padding: 0.5rem;">
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">E-post</label>
-                            <input type="email" id="email" class="form-control" required>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" style="width: 100%; padding: 0.5rem;">
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Ämne</label>
-                            <select id="subject" class="form-control" required>
-                                <option value="">Välj ämne</option>
-                                <option value="support">Support</option>
-                                <option value="sales">Försäljning</option>
-                                <option value="consultation">Konsultation</option>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" style="width: 100%; padding: 0.5rem;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="meeting">Föredragen kontaktmetod</label>
+                            <select id="meeting" style="width: 100%; padding: 0.5rem;">
+                                <option>Online-möte (Zoom/Teams)</option>
+                                <option>Telefonsamtal</option>
+                                <option>Personligt möte i Stockholm</option>
                             </select>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Meddelande</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="message">Meddelande</label>
+                            <textarea id="message" rows="4" style="width: 100%; padding: 0.5rem;"></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Skicka Meddelande</button>
+                        <button type="submit" class="btn">Skicka förfrågan</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h4>SvenskHost</h4>
-                    <p>Premium webbhotell och webbdesign med svensk support</p>
-                </div>
-                
-                <div>
-                    <h4>Tjänster</h4>
-                    <ul>
-                        <li><a href="#">Webbhotell</a></li>
-                        <li><a href="#">Domäner</a></li>
-                        <li><a href="#">Webbdesign</a></li>
-                        <li><a href="#">E-post</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Kontakt</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Guider</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Företag</h4>
-                    <ul>
-                        <li><a href="#">Om oss</a></li>
-                        <li><a href="#">Blogg</a></li>
-                        <li><a href="#">Villkor</a></li>
-                        <li><a href="#">Integritet</a></li>
-                    </ul>
-                </div>
+            <div class="logo" style="margin-bottom: 1rem;">SvenskHost</div>
+            <p>Din kompletta lösning för domän, webbdesign och hosting</p>
+            <div style="margin: 1rem 0;">
+                <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-instagram"></i></a>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 SvenskHost AB. Alla rättigheter reserverade.</p>
-            </div>
+            <p style="margin-top: 2rem;">&copy; 2023 SvenskHost.com - Alla rättigheter reserverade</p>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const nav = document.getElementById('nav');
-        
-        mobileToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            icon.className = nav.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
-        });
-        
-        // Close mobile menu when clicking links
-        document.querySelectorAll('.nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                mobileToggle.querySelector('i').className = 'fas fa-bars';
-            });
-        });
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Tack för ditt meddelande! Vi återkommer så snart som möjligt.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
