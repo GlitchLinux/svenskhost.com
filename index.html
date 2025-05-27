@@ -4,168 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SvenskHost.com - Komplett webbhotell & webbdesign</title>
-    <style>
-        :root {
-            --primary: #005F87;
-            --secondary: #FFD700;
-            --light: #F5F5F5;
-            --dark: #333333;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1rem 0;
-        }
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--secondary);
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin-left: 2rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1551434678-e076c223a692');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: var(--dark);
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #e6c200;
-            transform: translateY(-3px);
-        }
-        .features {
-            padding: 4rem 0;
-            background-color: var(--light);
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .feature-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .feature-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .feature-card h3 {
-            color: var(--primary);
-        }
-        .pricing {
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .pricing-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .pricing-card h3 {
-            color: var(--primary);
-        }
-        .price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin: 1rem 0;
-            color: var(--primary);
-        }
-        .contact {
-            padding: 4rem 0;
-            background-color: var(--light);
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .contact-info {
-            margin-bottom: 2rem;
-        }
-        .contact-info i {
-            margin-right: 0.5rem;
-            color: var(--primary);
-        }
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -285,20 +124,20 @@
                 </div>
             </div>
             
-            <p style="margin-top: 2rem;">Behöver du en anpassad lösning? <a href="#kontakt">Kontakta oss</a> för en personlig offert.</p>
+            <p class="custom-offer">Behöver du en anpassad lösning? <a href="#kontakt">Kontakta oss</a> för en personlig offert.</p>
         </div>
     </section>
 
-    <section id="om-oss" class="about" style="padding: 4rem 0;">
+    <section id="om-oss" class="about">
         <div class="container">
             <h2 class="section-title">Varför välja SvenskHost?</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
+            <div class="about-content">
                 <p>På SvenskHost gör vi det enkelt för dig att etablera en professionell webbnärvaro - oavsett din tekniska kunskap. Vår passion är att hjälpa svenska företag och organisationer att lyckas online.</p>
                 
-                <h3 style="color: var(--primary); margin-top: 2rem;">Vår vision</h3>
+                <h3>Vår vision</h3>
                 <p>Vi tror att varje företag förtjänar en webbplats som reflekterar deras unika värde - och att den ska vara enkel att skapa och underhålla. Därför har vi skapat en komplett lösning där vi tar hand om allt tekniskt åt dig.</p>
                 
-                <h3 style="color: var(--primary); margin-top: 2rem;">Svensk support</h3>
+                <h3>Svensk support</h3>
                 <p>All vår support sker på svenska eller engelska, med snabba svarstider och personlig service. Vi finns här för dig när du behöver hjälp - dygnet runt, året om.</p>
             </div>
         </div>
@@ -310,51 +149,51 @@
             <p class="section-subtitle">Vi hjälper dig gärna på vägen till din perfekta webbplats</p>
             
             <div class="contact-grid">
-                <div>
+                <div class="contact-info">
                     <h3>Kontaktinformation</h3>
-                    <div class="contact-info">
+                    <div class="info-item">
                         <i class="fas fa-phone"></i> <span>08-123 45 67</span>
                     </div>
-                    <div class="contact-info">
+                    <div class="info-item">
                         <i class="fas fa-envelope"></i> <span>support@svenskhost.com</span>
                     </div>
-                    <div class="contact-info">
+                    <div class="info-item">
                         <i class="fas fa-comment-dots"></i> <span>Live-chat på webbplatsen</span>
                     </div>
-                    <div class="contact-info">
+                    <div class="info-item">
                         <i class="fas fa-clock"></i> <span>Support dygnet runt, året om</span>
                     </div>
-                    <div class="contact-info">
+                    <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i> <span>Sveavägen 123, 111 34 Stockholm</span>
                     </div>
                 </div>
                 
-                <div>
+                <div class="contact-form">
                     <h3>Boka konsultation</h3>
                     <form>
-                        <div style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="name">Namn</label>
-                            <input type="text" id="name" style="width: 100%; padding: 0.5rem;">
+                            <input type="text" id="name">
                         </div>
-                        <div style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="email">E-post</label>
-                            <input type="email" id="email" style="width: 100%; padding: 0.5rem;">
+                            <input type="email" id="email">
                         </div>
-                        <div style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="phone">Telefon</label>
-                            <input type="tel" id="phone" style="width: 100%; padding: 0.5rem;">
+                            <input type="tel" id="phone">
                         </div>
-                        <div style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="meeting">Föredragen kontaktmetod</label>
-                            <select id="meeting" style="width: 100%; padding: 0.5rem;">
+                            <select id="meeting">
                                 <option>Online-möte (Zoom/Teams)</option>
                                 <option>Telefonsamtal</option>
                                 <option>Personligt möte i Stockholm</option>
                             </select>
                         </div>
-                        <div style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="message">Meddelande</label>
-                            <textarea id="message" rows="4" style="width: 100%; padding: 0.5rem;"></textarea>
+                            <textarea id="message" rows="4"></textarea>
                         </div>
                         <button type="submit" class="btn">Skicka förfrågan</button>
                     </form>
@@ -365,14 +204,14 @@
 
     <footer>
         <div class="container">
-            <div class="logo" style="margin-bottom: 1rem;">SvenskHost</div>
-            <p>Din kompletta lösning för domän, webbdesign och hosting</p>
-            <div style="margin: 1rem 0;">
-                <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-instagram"></i></a>
+            <div class="footer-logo">SvenskHost</div>
+            <p class="footer-text">Din kompletta lösning för domän, webbdesign och hosting</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <p style="margin-top: 2rem;">&copy; 2023 SvenskHost.com - Alla rättigheter reserverade</p>
+            <p class="copyright">&copy; 2023 SvenskHost.com - Alla rättigheter reserverade</p>
         </div>
     </footer>
 </body>
